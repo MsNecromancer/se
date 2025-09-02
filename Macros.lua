@@ -1,27 +1,40 @@
 --####################################################
 --###            WELCOME TO MY LUA HELL            ###
 --####################################################
-local has_run_startup =  --Turns off the ready()
+
+-- Only allow these usernames to run this script
+-- You can just copy and host your own lua on github
+local allowed_names = {
+    MsNecro = true,
+    MsNecromancer = true,
+}
+
+if not allowed_names[you.name()] then
+    return -- Stop if character name doesn't match
+end
+
+-- Tracks whether we've already run startup macros
+local has_run_startup = false
 
 -- Default macros by class
 local macros_by_class = {
     Necromancer = {
         "macros = M ` za.",
-        "macros += M 1 zb."
+        "macros += M 1 zb.",
     },
     Berserker = {
-        "macros = M ` zc."
-    }
+        "macros = M ` zc.",
+    },
 }
 
--- Special macros for specific race/class combos
+-- Macros for specific race/class combos
 local macros_by_combo = {
     ["Minotaur/Berserker"] = {
-        "macros += M 2 zf."
+        "macros += M 2 zf.",
     },
     ["Deep Elf/Necromancer"] = {
-        "macros += M 2 zg."
-    }
+        "macros += M 2 zg.",
+    },
 }
 
 -- Apply macros from a list
@@ -42,10 +55,11 @@ local function setup_macros(my_class, my_race)
     apply_macros(macros_by_combo[key])
 end
 
+-- Runs once after class + race are available
 function ready()
     if has_run_startup then return end
     if not (you.class() and you.race()) then return end
 
     setup_macros(you.class(), you.race())
     has_run_startup = true
-}
+end
