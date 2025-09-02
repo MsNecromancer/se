@@ -13,12 +13,13 @@ one_SDL_sound_channel = false
      ## To work: one_SDL_sound_channel = true
     sound_fade_time = 0.5
 
-## Pack that are listed last override the ones prior when duplicate.
-## These are just suggested sound packs see the Sound-Support github for more info
+     ## Pack that are listed last override the ones prior when duplicate.
+     ## These are just suggested sound packs see the Sound-Support github for more info
 sound_pack += https://osp.nemelex.cards/build/latest.zip:["init.txt"]
 sound_pack += https://sound-packs.nemelex.cards/Autofire/BindTheEarth/BindTheEarth.zip
 
-## My personal sound choices, silly and humorus mostly
+     ## My personal sound choices, silly and humorus mostly see 
+     ## https://github.com/MsNecromancer/se/tree/main for more details
 sound_pack += https://MsNecromancer.github.io/se/DCSSv.02.zip
 ######################################################
 ```
