@@ -2,6 +2,8 @@ Hey there if you found this, congrats! I really have no idea what search engine 
 
 If you want to find me while playing, I play on the [New York DCSS Server](https://crawl.dcss.io/#lobby) and sometimes stream DCSS on [twitch](https://www.twitch.tv/msnecro/), but rarely as of late. If you are having issues or want to reach out you can find me on discord user name: msnecromancer
 
+
+
 ```
 ######################################################
 ###                 SOUND SETTINGS                 ###
